@@ -33,6 +33,36 @@ class spotify_client:
         print("")
         return response_json
 
+    def authorization_request(self):
+        # message = local_conf.CLIENT_ID + ":" + local_conf.CLIENT_SECRET
+        # message_bytes = message.encode('ascii')
+        # base64_bytes = base64.b64encode(message_bytes)
+        # message_str = base64_bytes.decode('ascii')
+        # encoded_client_id_secret = message_str
+        # headers = {'Authorization':
+        #                'Basic ' + encoded_client_id_secret}
+        r = requests.get('https://api.github.com/events')
+        r = requests.post('https://httpbin.org/post', data={'key': 'value'})
+        r = requests.get(global_conf.USER_AUTHENTICATION_REQUEST, data={'grant_type': 'client_credentials'})#, headers=headers)
+        response_json = r.json()
+        print("")
+        print("Access (Bearer) Token JSON Response:")
+        print(response_json)
+        print("")
+        return response_json["access_token"]
+        return
+
+    def playlist_info(self, access_token, playlist_id):
+        headers = {'Authorization':
+                       'Bearer ' + access_token}
+        r = requests.get(global_conf.AUDIO_FEATURES_API_URL + playlist_id, headers=headers)
+        response_json = r.json()
+        print("Playlis JSON Response:")
+        print(response_json)
+        print("")
+        return response_json
+        return
+
     def write_dict_to_csv(self, audio_feature_dict):
         with open('tracks_log.csv', 'w', encoding='UTF8', newline='') as f:
             for key in audio_feature_dict.keys():
