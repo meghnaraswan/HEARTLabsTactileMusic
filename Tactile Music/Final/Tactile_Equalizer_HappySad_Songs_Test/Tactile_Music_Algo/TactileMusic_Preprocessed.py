@@ -110,7 +110,7 @@ async def audio_to_tactile(data, samplerate, interval):
     BPF_factor = BPF_avg/ Baseline_BPF_avg
     HPF_factor = HPF_avg/ Baseline_HPF_avg
     print("Threshold factors are: \n", Original_factor, LPF_factor, BPF_factor, HPF_factor)
-    input()
+    # input()
 
     # ------------ Power computation ------------
     #NOTE: Since samplesPerInterval is dependent on samplerate, with higher sample rate audio, there is a significant performance hit.  Audio should be downsampled, either in code (NYI) or in Audacity, before processing
@@ -218,7 +218,7 @@ async def play_file(filename):
     UART_TX = 'b7328f9c-c89e-4d74-9a5e-000000000001' #UART'S TX is Bleak's RX
     UART_RX = 'b7328f9c-c89e-4d74-9a5e-000000000002' #UART'S RX is Bleak's TX
 
-    address = "24:0A:C4:60:97:22"  #NOTE: MAC address is per device, so this needs to be changed
+    address = "24:6f:28:7a:91:76" #"24:0A:C4:60:97:22"  #NOTE: MAC address is per device, so this needs to be changed
     while True:
         try:
             client = BleakClient(address)
@@ -323,7 +323,7 @@ async def play_file(filename):
 # asyncio.run(play_file("test.wav")) #current algo/thresholds dont work for this
 # asyncio.run(play_file("Spoopy.wav"))
 # asyncio.run(play_file("Bobby-McFerrin-Don-t-Worry-Be-Happy-CALM.wav"))
-asyncio.run(play_file("Eagles-Hotel-California.wav"))
+# asyncio.run(play_file("Eagles-Hotel-California.wav"))
 # asyncio.run(play_file("Celine-Dion-My-Heart-will-go-on-Titanic.wav"))
 #Happy
 # asyncio.run(play_file("Macarena-Los-del-Rio-Hey-Macarena_HAPPY.wav"))
@@ -333,6 +333,38 @@ asyncio.run(play_file("Eagles-Hotel-California.wav"))
 # asyncio.run(play_file("The-First-Time-Ever-I-Saw-Your-Face_SAD.wav"))
 # asyncio.run(play_file("The-Lion-King-To-Die-For.wav"))
 # asyncio.run(play_file("Say-Something-A-Great-Big-World_-Christina-Aguilera_SAD.wav"))
+
+############################################################################################
+
+#Happy
+# asyncio.run(play_file("HAPPY_Mariya_Takeuchi_Plastic_Love.wav"))
+# asyncio.run(play_file("HAPPY_The_Rolling_Stones_Start_Me_Up.wav"))
+# asyncio.run(play_file("HAPPY_The_Romantics_What_I_Like_About_You.wav"))
+
+# asyncio.run(play_file("HAPPY_Ambrosia_How_Much_I_Feel.wav"))
+# asyncio.run(play_file("HAPPY_StevePerry_Foolish_Heart.wav"))
+
+#Sad
+# asyncio.run(play_file("SAD_Chris_Isaak_Blue_Spanish_Sky.wav"))
+# asyncio.run(play_file("SAD_Joe_Cocker_You_Are_So_Beautiful"))
+
+# asyncio.run(play_file("SAD_Billy_Joel_Piano_Man.wav"))
+# asyncio.run(play_file("SAD_George_Michael_Spinning_The_Wheel.wav"))
+
+#Calm
+# asyncio.run(play_file("CALM_Doobie_Brothers_What_A_fool_Believes.wav"))
+# asyncio.run(play_file("CALM_Kate_Bush_Cloudbusting.wav"))
+
+# asyncio.run(play_file("CALM_Anri_Last_Summer_Whisper.wav"))
+# asyncio.run(play_file("CALM_George_Michael_Move_On.wav"))
+
+#Angry
+# asyncio.run(play_file("ANGRY_Mötley_Crüe_Kickstart_my_Heart.wav"))
+# asyncio.run(play_file("ANGRY_Guns_N'_Roses_Welcome_To_The_Jungle.wav"))
+
+# asyncio.run(play_file("ANGRY_Jane's_Addiction_Jane_Says.wav"))
+# asyncio.run(play_file("ANGRY_Queen_Under_Pressure.wav"))
+
 
 '''
 Note: There seems to be a bug somewhere in this code. It occasionally goes out of synch.
