@@ -365,6 +365,84 @@ async def play_file(filename):
 # asyncio.run(play_file("ANGRY_Jane's_Addiction_Jane_Says.wav"))
 # asyncio.run(play_file("ANGRY_Queen_Under_Pressure.wav"))
 
+############################################################################################
+
+#####Happy
+
+#Brass
+# asyncio.run(play_file("fun-retro-upbeat-SBA-300515932.wav"))
+#Guitar
+# asyncio.run(play_file("audioblocks-morning-sun_SlsU0CqjH.wav"))
+#Orchestra
+# asyncio.run(play_file("upbeat-funky-good-times-SBA-300270097.wav"))
+#Precussion
+# asyncio.run(play_file("serious-funkin-business-SBA-346475726.wav"))
+#Piano
+# asyncio.run(play_file("audioblocks-maca_SN9iHvqLL.wav"))
+#Synth
+# asyncio.run(play_file("audioblocks-perfect-wave_rbVWCp0UK.wav"))
+#Woodwind
+# asyncio.run(play_file("little-duke-SBA-300505158.wav"))
+
+#####Sad
+
+#Brass
+# asyncio.run(play_file("western-adventure-version-6-1-min-lyric-theme-SBA-300505680.wav"))
+#Guitar
+# asyncio.run(play_file("sleeping-peacefully_GJkBQ8ru.wav"))
+#Orchestra
+# asyncio.run(play_file("audioblocks-last-dream_rq2WZb_qU.wav"))
+#Precussion
+# asyncio.run(play_file("blac-demarco-instrumental-version-SBA-300472273.wav"))
+#Piano
+# asyncio.run(play_file("worlds-apart-SBA-300481567.wav"))
+#Synth
+# asyncio.run(play_file("waking-life-SBA-300480598.wav"))
+#Woodwind
+# asyncio.run(play_file("sad-drama-cinematic-strings-trailer-SBA-300515876.wav"))
+
+#####Calm
+
+#Brass
+# asyncio.run(play_file("background-jazz-SBA-300481063.wav"))
+#Guitar
+# asyncio.run(play_file("beautiful-romantic-acoustic-guitar-theme-SBA-300271192.wav"))
+#Orchestra
+# asyncio.run(play_file("meditation-relaxation-SBA-300515820.wav"))
+#Precussion
+# asyncio.run(play_file("audioblocks-relaxing-lo-fi-chill_HnD1aZd7P.wav"))
+#Piano
+# asyncio.run(play_file("audioblocks-mountainscape_HvsfghuMI.wav"))
+#Synth
+# asyncio.run(play_file("nature-life-SBA-300525065.wav"))
+#Woodwind
+# asyncio.run(play_file("adventures-in-fine-dining-SBA-300514572.wav"))
+
+#####Angry
+
+#Brass
+# asyncio.run(play_file("audioblocks-winner-bpm-150-by-cronicbeats-150bpm_SLomsqx5D.wav"))
+#Guitar
+# asyncio.run(play_file("built-tough-SBA-300540260.wav"))
+#Orchestra
+# asyncio.run(play_file("fun-dark-stuff-SBA-300172526.wav"))
+#Precussion
+# asyncio.run(play_file("headbangers-and-mash-SBA-300539836.wav"))
+#Piano
+# asyncio.run(play_file("audioblocks-down-to-the-wire_BwxESqOtL.wav"))
+#Synth
+# asyncio.run(play_file("audioblocks-bass-buzzer_SAjmrnuzI.wav"))
+#Woodwind
+# asyncio.run(play_file("run-SBA-300555157.wav"))
+
+#####Clock
+# asyncio.run(play_file("clock-ticking-2.wav"))
+# asyncio.run(play_file("clock-ticking-exact-looping_zJ4DdH4_.wav"))
+# asyncio.run(play_file("clock-ticking-tick-tock-SBA-300419273.wav"))
+
+
+############################################################################################
+
 
 '''
 Note: There seems to be a bug somewhere in this code. It occasionally goes out of synch.
