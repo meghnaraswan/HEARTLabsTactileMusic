@@ -178,11 +178,11 @@ async def audio_to_tactile(data, samplerate, interval):
             # elif (threshold[2] > intensities[i] >= tuned_threshold[1]):
             #     modulated_intensity = 400 #512
             elif ((threshold[1])/2 > intensities[i] >= tuned_threshold[0]):
-                modulated_intensity = 700 #100
+                modulated_intensity = 700 #650
             # elif ((tuned_threshold[0])/2 <= intensities[i] < tuned_threshold[0]):
             #     modulated_intensity = 500 #100
             elif (tuned_threshold[0] > intensities[i] >= (tuned_threshold[0])/2):
-                modulated_intensity = 500 #100
+                modulated_intensity = 500 #400
             elif ((tuned_threshold[0])/2 > intensities[i]):
                 modulated_intensity = 0 #100
             # elif (intensities[i] < (tuned_threshold[0])/2):
@@ -199,6 +199,11 @@ async def audio_to_tactile(data, samplerate, interval):
 
             write_bytes += modulated_intensity.to_bytes(2, 'big')
             # prev_intensities[i] = intensities[i]
+            # to_bytes(length, byteorder, *, signed=False)
+                # Return an array of bytes representing an integer.
+                # to_bytes(length, byteorder, *, signed=False)
+                # (1024).to_bytes(2, byteorder='big')
+                # b'\x04\x00'
         vibrations.append(write_bytes) #8 byte data for each segment is appended into vibration
         #vibration should have as many elements as the num of segments.
 
