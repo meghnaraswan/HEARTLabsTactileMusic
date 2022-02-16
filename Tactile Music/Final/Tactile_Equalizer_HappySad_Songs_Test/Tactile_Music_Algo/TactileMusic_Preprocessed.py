@@ -176,9 +176,17 @@ async def audio_to_tactile(data, samplerate, interval):
             if (intensities[i] >= (tuned_threshold[1])/2):
                 modulated_intensity = 850
             # elif (threshold[2] > intensities[i] >= tuned_threshold[1]):
-            #     modulated_intensity = 100#512
-            # elif (threshold[1] > intensities[i] >= tuned_threshold[0]):
-            #     modulated_intensity = 0#100
+            #     modulated_intensity = 400 #512
+            elif ((threshold[1])/2 > intensities[i] >= tuned_threshold[0]):
+                modulated_intensity = 700 #100
+            # elif ((tuned_threshold[0])/2 <= intensities[i] < tuned_threshold[0]):
+            #     modulated_intensity = 500 #100
+            elif (tuned_threshold[0] > intensities[i] >= (tuned_threshold[0])/2):
+                modulated_intensity = 500 #100
+            elif ((tuned_threshold[0])/2 > intensities[i]):
+                modulated_intensity = 0 #100
+            # elif (intensities[i] < (tuned_threshold[0])/2):
+            #     modulated_intensity = 0 #100
 
             # if (intensities[i] >= tuned_threshold[2]):
             #     modulated_intensity = 850
@@ -387,7 +395,7 @@ async def play_file(filename):
 #####Sad
 
 #Brass
-# asyncio.run(play_file("western-adventure-version-6-1-min-lyric-theme-SBA-300505680.wav"))
+asyncio.run(play_file("western-adventure-version-6-1-min-lyric-theme-SBA-300505680.wav"))
 #Guitar
 # asyncio.run(play_file("sleeping-peacefully_GJkBQ8ru.wav"))
 #Orchestra
